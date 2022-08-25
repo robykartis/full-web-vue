@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 
 const store = createStore({
     state: {
-        //define variables
+        //define variabless
         token: localStorage.getItem("token") || 0,
     },
 

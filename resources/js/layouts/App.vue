@@ -10,15 +10,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'Login' }">Login </router-link>
+            <router-link class="nav-link" :to="{ name: 'Login' }" v-if="$store.getters.getToken == 0">Login
+            </router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'Register' }">
+            <router-link class="nav-link" :to="{ name: 'Register' }" v-if="$store.getters.getToken == 0">
               Register
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" :to="{ name: 'Dashboard' }">
+            <router-link class="nav-link" :to="{ name: 'Dashboard' }" v-if="$store.getters.getToken !== 0">
               Dashboard
             </router-link>
           </li>

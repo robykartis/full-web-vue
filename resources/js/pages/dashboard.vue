@@ -7,12 +7,15 @@
 
 <script>
 import { useRouter } from 'vue-router';
+import { useStore } from 'vuex'
+
 export default {
     name: 'Dashboard',
     setup() {
         const router = useRouter()
+        const store = useStore()
         function logout() {
-            localStorage.removeItem('token');
+            store.dispatch('removeToken');
             router.push({ name: 'Home' })
         }
         return {

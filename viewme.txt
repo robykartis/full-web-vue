@@ -1,0 +1,6 @@
+composer create-project laravel/laravel full-web-vue
+npm install vue@nexr vue-loader@next
+npm install
+npm i @vitejs/plugin-vue
+import vue from '@vitejs/plugin-vue'
+npm isntall vue-router@next
